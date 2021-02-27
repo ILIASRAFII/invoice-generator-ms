@@ -2,8 +2,10 @@
   "name": "invoice-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
+    "dev": "watch \"npm run build\" src",
+    "build": "babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,5 +18,10 @@
   "dependencies": {
     "moment": "^2.29.1",
     "pdfmake": "^0.1.70"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   }
 }
